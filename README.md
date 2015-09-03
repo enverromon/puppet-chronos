@@ -2,11 +2,11 @@
 
 This is a Puppet module for chronos based on the second generation layout ("NextGen") of Example42 Puppet Modules.
 
-Made by Alessandro Franceschi / Lab42
+Made by Enver Romon / Kimia Solutions S.L.
 
-Official site: http://www.example42.com
+Official site: http://www.kimia.mobi
 
-Official git repository: http://github.com/example42/puppet-chronos
+Official git repository: http://github.com/enverromon/puppet-chronos
 
 Released under the terms of Apache 2 License.
 
@@ -53,10 +53,10 @@ For detailed info about the logic and usage patterns of Example42 modules check 
 
 
 ## USAGE - Overrides and Customizations
-* Use custom sources for main config file 
+* Use custom sources for main config file
 
         class { 'chronos':
-          source => [ "puppet:///modules/example42/chronos/chronos.conf-${hostname}" , "puppet:///modules/example42/chronos/chronos.conf" ], 
+          source => [ "puppet:///modules/example42/chronos/chronos.conf-${hostname}" , "puppet:///modules/example42/chronos/chronos.conf" ],
         }
 
 
@@ -67,7 +67,7 @@ For detailed info about the logic and usage patterns of Example42 modules check 
           source_dir_purge => false, # Set to true to purge any existing file not present in $source_dir
         }
 
-* Use custom template for main config file. Note that template and source arguments are alternative. 
+* Use custom template for main config file. Note that template and source arguments are alternative.
 
         class { 'chronos':
           template => 'example42/chronos/chronos.conf.erb',
@@ -80,18 +80,18 @@ For detailed info about the logic and usage patterns of Example42 modules check 
         }
 
 
-## USAGE - Example42 extensions management 
+## USAGE - Example42 extensions management
 * Activate puppi (recommended, but disabled by default)
 
         class { 'chronos':
           puppi    => true,
         }
 
-* Activate puppi and use a custom puppi_helper template (to be provided separately with a puppi::helper define ) to customize the output of puppi commands 
+* Activate puppi and use a custom puppi_helper template (to be provided separately with a puppi::helper define ) to customize the output of puppi commands
 
         class { 'chronos':
           puppi        => true,
-          puppi_helper => 'myhelper', 
+          puppi_helper => 'myhelper',
         }
 
 * Activate automatic monitoring (recommended, but disabled by default). This option requires the usage of Example42 monitor and relevant monitor tools modules
@@ -103,7 +103,7 @@ For detailed info about the logic and usage patterns of Example42 modules check 
 
 * Activate automatic firewalling. This option requires the usage of Example42 firewall and relevant firewall tools modules
 
-        class { 'chronos':       
+        class { 'chronos':
           firewall      => true,
           firewall_tool => 'iptables',
           firewall_src  => '10.42.0.0/24',

@@ -112,6 +112,9 @@ class chronos::params {
   $disable = false
   $disableboot = false
   $use_mesos_repo = true
+  $hostname = ''
+  $user = ''
+  $cluster_name = ''
 
   ### General module variables that can have a site or per module default
   $monitor = false

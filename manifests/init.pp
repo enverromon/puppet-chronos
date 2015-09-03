@@ -11,6 +11,15 @@
 # [*use_mesos_repo*]
 #   Use the mesosphere repo
 #
+# [*hostname*]
+#   Hostname for Chronos
+#
+# [*user*]
+#   User for chronos jobs
+#
+# [*cluster_name*]
+#   Name of the cluster
+#
 # [*my_class*]
 #   Name of a custom class to autoload to manage module's customizations
 #   If defined, chronos class will automatically "include $my_class"
