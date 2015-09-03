@@ -101,10 +101,10 @@ class chronos::params {
   $source = ''
   $source_dir = ''
   $source_dir_purge = false
-  $template_port = ''
-  $template_hostname = ''
-  $template_user = ''
-  $template_cluster = ''
+  $template_port = 'chronos/http_port.erb'
+  $template_hostname = 'chronos/hostname.erb'
+  $template_user = 'chronos/user.erb'
+  $template_cluster = 'chronos/cluster_name.erb'
   $options = ''
   $service_autorestart = true
   $version = 'present'
@@ -112,9 +112,9 @@ class chronos::params {
   $disable = false
   $disableboot = false
   $use_mesos_repo = true
-  $hostname = ''
-  $user = ''
-  $cluster_name = ''
+  $hostname = 'localhost'
+  $user = 'root'
+  $cluster_name = 'MESOS'
 
   ### General module variables that can have a site or per module default
   $monitor = false
