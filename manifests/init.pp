@@ -11,9 +11,6 @@
 # [*use_mesos_repo*]
 #   Use the mesosphere repo
 #
-# [*hostname*]
-#   Hostname for Chronos
-#
 # [*user*]
 #   User for chronos jobs
 #
@@ -212,7 +209,6 @@
 # See README for usage patterns.
 #
 class chronos (
-  $hostname            = params_lookup( 'hostname' ),
   $user                = params_lookup( 'user' ),
   $cluster_name        = params_lookup( 'cluster_name' ),
   $use_mesos_repo      = params_lookup( 'use_mesos_repo' ),

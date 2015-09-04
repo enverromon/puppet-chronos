@@ -112,10 +112,8 @@ class chronos::params {
   $disable = false
   $disableboot = false
   $use_mesos_repo = true
-  $hostname = 'localhost'
   $user = 'root'
   $cluster_name = 'MESOS'
-  $hostname = $::fqdn
 
   ### General module variables that can have a site or per module default
   $monitor = false
