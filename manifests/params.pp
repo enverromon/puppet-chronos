@@ -115,6 +115,7 @@ class chronos::params {
   $hostname = 'localhost'
   $user = 'root'
   $cluster_name = 'MESOS'
+  $hostname = $::fqdn
 
   ### General module variables that can have a site or per module default
   $monitor = false
